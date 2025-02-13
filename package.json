@@ -1,0 +1,19 @@
+{
+  "name": "v2interfaz",
+  "version": "1.0.0",
+  "description": "Mejorando primera version de Urnal",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp"
+  ],
+  "author": "Alberto Santos Díaz",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.84.0"
+  }
+}
