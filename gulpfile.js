@@ -9,15 +9,11 @@ import cssnano from 'cssnano';
 import concat from 'gulp-concat';
 import terser from 'gulp-terser-js';
 import rename from 'gulp-rename';
-import imagemin from 'gulp-imagemin';
-import notify from 'gulp-notify';
-import cache from 'gulp-cache';
 import del from 'del';
-import webp from 'gulp-webp';
+
 const paths = {
     scss: 'src/scss/**/*.scss',
-    js: 'src/js/**/*.js',
-    images: 'src/img/**/*'
+    js: 'src/js/**/*.js'
 };
 
 function clean() {
@@ -43,31 +39,13 @@ function javascript() {
         .pipe(dest('build/js'));
 }
 
-function images() {
-    return src(paths.images)
-        .pipe(cache(imagemin({ optimizationLevel: 3 })))
-        .pipe(dest('build/img'))
-        .pipe(notify('Imagen Completada'));
-}
-
-function versionWebp() {
-    return src(paths.images)
-        .pipe(webp())
-        .pipe(dest('build/img'))
-        .pipe(notify('Imagen WebP Completada'));
-}
-
 function watchFiles() {
     watch(paths.scss, css);
     watch(paths.js, javascript);
-    watch(paths.images, images);
-    watch(paths.images, versionWebp);
 }
 
 export { clean };
 export { css };
 export { javascript };
-export { images };
-export { versionWebp };
 export { watchFiles as watch };
-export default series(clean, parallel(css, javascript, images, versionWebp), watchFiles);
+export default series(clean, parallel(css, javascript), watchFiles);
