@@ -21,7 +21,7 @@ Sistema de interfaz web con automatización de tareas utilizando Gulp para optim
 ## Instalación
 ```bash
 # Clonar el repositorio
-git clone [URL del repositorio]
+git clone [https://github.com/albertosdz/V2interfaz]
 
 # Instalar dependencias
 npm install
