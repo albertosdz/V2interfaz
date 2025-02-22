@@ -5,18 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Urnal</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="build/css/app.css" />
   </head>
   <body>
-    <h1>Iniciando</h1>
+    <header class="header inicio">
+      <section class="arriba">
+        <a href="/" class="header__logo">
+          <img src="build/img/logo.svg" alt="logo" class="header__logo-image" />
+          <h2 class="header__logo-text">Urnal</h2>
+        </a>
 
+        <nav class="header__nav">
+          <a href="#" class="header__nav-link">Características</a>
+          <a href="#" class="header__nav-link">Soluciones</a>
+          <a href="#" class="header__nav-link">Planes</a>
+          <a href="#" class="header__nav-link">Demo</a>
+        </nav>
+
+        <div class="header__registro">
+          <a href="#" class="button--secondary">Log In <span> ></span></a>
+        </div>
+      </section>
+
+      <section class="hero abajo">
+        <h1 class="hero__title">Urnal organiza tu día, optimiza tu vida.</h1>
+        <p class="hero__text">
+          Gestión de proyectos, tareas y hábitos de manera simple e inteligente.
+        </p>
+        <a href="#" class="button button--primary">Registro</a>
+      </section>
+    </header>
+
+    <main class="main contenedor">
+      <section id="beneficios" class="benefits">
+        <h2 class="benefits__title">Productividad sin esfuerzo</h2>
+        <p class="benefits__description">
+          En Urnal creemos que la organización no debe ser complicada ni
+          consumir demasiado tiempo. Nuestra plataforma está diseñada para
+          ayudarte a gestionar tus tareas, proyectos y hábitos de manera
+          sencilla, permitiéndote concentrarte en lo que realmente importa. Con
+          herramientas inteligentes y automatización, optimizamos tu flujo de
+          trabajo para que puedas ser más productivo sin esfuerzo adicional.
+        </p>
+        <div class="benefits__item">
+          <h3>✅ Automatización inteligente</h3>
+          <p>
+            Urnal ajusta automáticamente tus tareas y horarios según tus hábitos
+            y prioridades, asegurando que cada día sea más eficiente sin
+            necesidad de configuraciones complejas.
+          </p>
+        </div>
+        <div class="benefits__item">
+          <h3>✅ Gestión flexible de tareas y proyectos</h3>
+          <p>
+            Organiza tu trabajo de la forma que prefieras, ya sea con listas,
+            tableros o etiquetas. Adapta cada proyecto a tus necesidades sin
+            perder el control de tus objetivos.
+          </p>
+        </div>
+        <div class="benefits__item">
+          <h3>✅ Seguimiento de hábitos</h3>
+          <p>
+            Construye y mantiene hábitos saludables con recordatorios
+            personalizados y un sistema de seguimiento que te ayuda a mantener
+            la motivación.
+          </p>
+        </div>
+        <div class="benefits__item">
+          <h3>✅ Interfaz intuitiva y minimalista</h3>
+          <p>
+            Disfruta de una experiencia libre de distracciones, con un diseño
+            limpio y funcional que te permite concentrarte en tus tareas sin
+            complicaciones.
+          </p>
+        </div>
+      </section>
+
+      <!-- Funcionalidades -->
+      <section id="features" class="features">
+        <h2 class="features__title">Todo lo que necesitas en un solo lugar</h2>
+        <div class="features__items">
+          <p class="features__item">📌 Gestor de proyectos</p>
+          <p class="features__item">📌 Planificación de tareas</p>
+          <p class="features__item">📌 Seguimiento de hábitos</p>
+          <p class="features__item">📌 Automatización inteligente</p>
+        </div>
+      </section>
+
+      <!-- Testimonios -->
+      <section id="testimonios" class="testimonials">
+        <h2 class="testimonials__title">Lo que dicen nuestros usuarios</h2>
+        <p class="testimonials__text">
+          "Urnal ha cambiado la forma en que organizo mi día, ahora soy mucho
+          más productivo." - Usuario Feliz
+        </p>
+      </section>
+    </main>
+
+    <footer id="signup" class="footer">
+      <p class="footer__title">Urnal by albertosdz</p>
+      <a href="#" class="button button--ghost">Regístrate gratis</a>
+    </footer>
     <script src="build/js/bundle.min.js"></script>
   </body>
 </html>

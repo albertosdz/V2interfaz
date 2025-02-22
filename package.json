@@ -4,9 +4,10 @@
   "description": "Mejorando primera version de Urnal",
   "main": "gulpfile.js",
   "type": "module",
-  "scripts": {
-    "dev": "gulp"
-  },
+"scripts": {
+"dev": "gulp",
+"server": "live-server"
+},
   "keywords": [
     "SASS",
     "NPM",
@@ -31,5 +32,8 @@
     "gulp-terser-js": "^5.2.2",
     "gulp-webp": "^4.0.1",
     "sass": "^1.85.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
   }
 }

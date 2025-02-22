@@ -1,5 +1,30 @@
-@import 'base/normalize';
-@import 'base/variables';
-@import 'base/mixins';
-@import 'base/globales';
-@import 'base/utilidades';
+// Base
+@use 'base';
+
+
+// Layout
+@use 'layout';
+/*@use 'layout/footer';
+@use 'layout/navegacion';*/
+
+// Paginas internas
+/*
+@use 'internas/admin';
+@use 'internas/crear';
+@use 'internas/dashboard';
+*/
+
+/*
+Ejemplo de como deberia estructurar por ejemplo el header
+
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.header {
+    background-color: v.$negro;
+    
+    @include m.tablet {
+        // estilos para tablet
+    }
+}
+*/

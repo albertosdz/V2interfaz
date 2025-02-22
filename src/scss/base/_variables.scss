@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@use "sass:math";  // Para operaciones matemáticas
+@forward "sass:math";  // Si necesitas usar operaciones matemáticas en otros archivos
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 
 // Fuentes
-$fuente_principal: 'Lato', sans-serif;
+$fuente_principal: "Poppins", serif;
 
 // Tamaño de Media Queries
 $telefono: 480px;
@@ -10,11 +14,11 @@ $desktop: 1024px;
 
 // Colores
 $negro: #000000;
-$amarillo: #E08709;;
-$verde: #71B100;
 $blanco: #FFFFFF;
-$gris: #e1e1e1;
-$grisOscuro: #333333;
+$azul: #3586ff;
+$verde: #71B100;
+$azulClaro: #d7e4f4;
+$grisClaro: #f0f0f0;
 
 $separacion: 5rem;
 
@@ -22,4 +26,5 @@ $separacion: 5rem;
 $delgada: 300;
 $regular : 400;
 $bold: 700;
-$black: 900
+$black: 900;
+

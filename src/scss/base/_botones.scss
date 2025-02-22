@@ -1,0 +1,13 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+
+.button--primary{
+    @include m.boton(v.$azul, v.$blanco, none);
+}
+
+.button--secondary {
+    @include m.boton(transparent, v.$azul, solid .2rem);
+
+}
+
