@@ -11,3 +11,19 @@
 
 }
 
+.button--ghost {
+    background-color: transparent;
+    color: v.$blanco;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    border-radius: .5rem;
+    border: none;
+    transition: ease .3s;
+
+    &:hover {
+        background-color: grey;
+        cursor: pointer;
+    }
+}
+

@@ -45,7 +45,11 @@
           ayudarte a gestionar tus tareas, proyectos y hábitos de manera
           sencilla, permitiéndote concentrarte en lo que realmente importa.
         </p>
-        <div class="benefits__item" onclick="cambiarBeneficio('beneficio1')" id="beneItem1">
+        <div
+          class="benefits__item"
+          onclick="cambiarBeneficio('beneficio1')"
+          id="beneItem1"
+        >
           <h3>Automatización inteligente</h3>
           <p>
             Urnal ajusta automáticamente tus tareas y horarios según tus hábitos
@@ -53,7 +57,11 @@
             necesidad de configuraciones complejas.
           </p>
         </div>
-        <div class="benefits__item" onclick="cambiarBeneficio('beneficio2')" id="beneItem2">
+        <div
+          class="benefits__item"
+          onclick="cambiarBeneficio('beneficio2')"
+          id="beneItem2"
+        >
           <h3>Gestión flexible de tareas y proyectos</h3>
           <p>
             Organiza tu trabajo de la forma que prefieras, ya sea con listas,
@@ -61,7 +69,11 @@
             perder el control de tus objetivos.
           </p>
         </div>
-        <div class="benefits__item" onclick="cambiarBeneficio('beneficio3')" id="beneItem3">
+        <div
+          class="benefits__item"
+          onclick="cambiarBeneficio('beneficio3')"
+          id="beneItem3"
+        >
           <h3>Seguimiento de hábitos</h3>
           <p>
             Construye y mantiene hábitos saludables con recordatorios
@@ -70,35 +82,104 @@
           </p>
         </div>
 
-        <img src="build/img/beneficios.avif" alt="beneficios" id="beneficio1"/>
-        <img src="build/img//beneficios2.png" alt="beneficios" id="beneficio2"/>
-        <img src="build/img/beneficios3.png" alt="beneficios" id="beneficio3"/>
+        <img src="build/img/beneficios.avif" alt="beneficios" id="beneficio1" />
+        <img
+          src="build/img//beneficios2.png"
+          alt="beneficios"
+          id="beneficio2"
+        />
+        <img src="build/img/beneficios3.png" alt="beneficios" id="beneficio3" />
       </section>
 
       <!-- Funcionalidades -->
       <section id="features" class="features">
         <h2 class="features__title">Todo lo que necesitas en un solo lugar</h2>
         <div class="features__items">
-          <p class="features__item">📌 Gestor de proyectos</p>
-          <p class="features__item">📌 Planificación de tareas</p>
-          <p class="features__item">📌 Seguimiento de hábitos</p>
-          <p class="features__item">📌 Automatización inteligente</p>
+          <div class="features__item">
+            <h3>Gestor de proyectos</h3>
+            <img src="build/img/proyects.svg" alt="" />
+          </div>
+          <div class="features__item">
+            <h3>Planificación de tareas</h3>
+            <img src="build/img/tasks.svg" alt="" />
+          </div>
+          <div class="features__item">
+            <h3>Seguimiento de hábitos</h3>
+            <img src="build/img/habits.svg" alt="" />
+          </div>
+          <div class="features__item">
+            <h3>Automatización inteligente</h3>
+            <img src="build/img/brain.svg" alt="" />
+          </div>
         </div>
       </section>
 
       <!-- Testimonios -->
       <section id="testimonios" class="testimonials">
         <h2 class="testimonials__title">Lo que dicen nuestros usuarios</h2>
-        <p class="testimonials__text">
-          "Urnal ha cambiado la forma en que organizo mi día, ahora soy mucho
-          más productivo." - Usuario Feliz
-        </p>
+        <div class="testimonials__container">
+          <p class="testimonials__text">
+            "Urnal ha cambiado la forma en que organizo mi día, ahora soy mucho
+            más productivo."
+          </p>
+          <div class="testimonials__icon">
+            <img src="build/img/user.svg" alt="icono usuario" />
+            <p>Usuario MUY Feliz</p>
+          </div>
+        </div>
+
+        <div class="testimonials__container">
+          
+          <p class="testimonials__text">
+            "Gracias a Urnal, mi planificación diaria es más sencilla y
+            efectiva. ¡No pierdo ni un minuto!"
+          </p>
+          <div class="testimonials__icon">
+            <img src="build/img/user.svg" alt="icono usuario" />
+            <p>Usuario Contento</p>
+          </div>
+        </div>
+
+        <div class="testimonials__container">
+          <p class="testimonials__text">
+            "Novea como me organizo ahora picha"
+          </p>
+          <div class="testimonials__icon">
+            <img src="build/img/user.svg" alt="icono usuario" />
+            <p>Juan Alberto</p>
+          </div>
+        </div>
+
+        <div class="testimonials__container">
+          
+          <p class="testimonials__text">
+            "Nunca había sido tan fácil gestionar mis proyectos. Urnal hace el trabajo pesado por mí."
+          </p>
+          <div class="testimonials__icon">
+            <img src="build/img/user.svg" alt="icono usuario" />
+            <p>Pedro Aguilar</p>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer id="signup" class="footer">
-      <p class="footer__title">Urnal by albertosdz</p>
-      <a href="#" class="button button--ghost">Regístrate gratis</a>
+      <p class="footer__title">
+        Urnal by <a href="https://github.com/albertosdz">albertosdz</a>
+      </p>
+      <div class="footer__redes">
+        <a href="https://www.instagram.com/"
+          ><img src="build/img/instagram.svg" alt="instagram"
+        /></a>
+        <a href="https://www.youtube.com/"
+          ><img src="build/img/youtube.svg" alt="youtube"
+        /></a>
+        <a href="https://x.com"><img src="build/img/x.svg" alt="x" /></a>
+        <a href="https://es.linkedin.com/"
+          ><img src="build/img/linkedin.svg" alt="linkedin"
+        /></a>
+      </div>
+      <a href="#" class="button--ghost">Regístrate gratis</a>
     </footer>
     <script src="build/js/bundle.min.js"></script>
   </body>
