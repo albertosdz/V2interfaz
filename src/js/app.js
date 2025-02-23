@@ -1,3 +1,4 @@
+//cambiar beneficios
 let beneficio = "beneficio1"; // Establece el beneficio inicial
 
 window.addEventListener("load", function () {
@@ -43,3 +44,18 @@ function cambiarBeneficio(cual) {
       break;
   }
 }
+
+//navegacion responsive
+const nav = document.getElementById('nav');
+const abrir = document.getElementById('abrir');
+const cerrar = document.getElementById('cerrar');
+
+abrir.addEventListener('click', ()=>{
+  nav.classList.add("visible");
+  document.body.style.overflow = "hidden";
+} );
+
+cerrar.addEventListener('click', () => {
+  nav.classList.remove("visible");
+  document.body.style.overflow = "";
+})
