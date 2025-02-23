@@ -1,0 +1,58 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.nosotros__titulo,
+.nosotros {
+  text-align: center;
+}
+
+.nosotros__seccion {
+  .nosotros__titulo--azul,
+  .nosotros__subtitulo--azul {
+    color: v.$azul;
+  }
+
+  padding: 3rem;
+
+  .nosotros__subtitulo {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .nosotros__descripcion {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  .nosotros__lista-item {
+    margin: 0 auto;
+    width: 50%;
+    text-align: start;
+  }
+  .nosotros__lista-item--negrita {
+    font-weight: v.$bold;
+  }
+
+  @include m.telefono {
+    .nosotros__descripcion {
+        width: 100%;
+    }
+    .nosotros__lista-item {
+        width: 100%;
+    }
+}
+}
+
+.fondoClaro {
+  background: v.$azulClaro;
+}
+
+.fondoOscuro {
+  background: v.$azul;
+
+  * {
+    color: v.$blanco;
+  }
+}
+

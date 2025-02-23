@@ -12,9 +12,7 @@
   );
 }
 
-.internas {
-  background: v.$azul;
-}
+
 
 .logo-interno {
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.359));
@@ -133,6 +131,14 @@
         margin-top: 7rem;
       }
     }
+  }
+}
+
+.internas {
+  background: v.$azul;
+
+  section, p,a ,span{
+    color: v.$blanco;
   }
 }
 
