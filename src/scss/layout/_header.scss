@@ -12,10 +12,17 @@
   );
 }
 
+.internas {
+  background: v.$azul;
+}
+
+.logo-interno {
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.359));
+}
 .header {
   display: flex;
   flex-direction: column;
-  padding: 4rem 3rem 0 3rem;
+  padding: 4rem 3rem 4rem 3rem;
 }
 
 .arriba {
@@ -31,11 +38,11 @@
   .header__logo {
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 200%;
     gap: 1rem;
 
     .header__logo-image {
-      height: 200%;
+      height: 100%;
     }
   }
 
