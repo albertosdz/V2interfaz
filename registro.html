@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urnal</title>
+
+    <link rel="icon" type="image/svg+xml" href="build/img/logo.svg" />
+    <link rel="stylesheet" href="build/css/app.css" />
+  </head>
+  <body>
+    <header class="header internas">
+      <section class="arriba">
+        <a href="/" class="header__logo">
+          <img
+            src="build/img/logo.svg"
+            alt="logo"
+            class="header__logo-image logo-interno"
+          />
+          <h2 class="header__logo-text">Urnal</h2>
+        </a>
+
+        <div class="header__abrir" id="abrir">
+          <img src="build/img/abrirMenuBlanco.svg" alt="Abrir menu" />
+        </div>
+
+        <nav class="header__nav" id="nav">
+          <div class="header__nav-cerrar">
+            <img
+              src="build/img/cerrarMenu.svg"
+              id="cerrar"
+              alt="Cerrar Menu"
+              class="header__nav--boton"
+            />
+          </div>
+          <div class="header__nav-list">
+            <a href="#" class="header__nav-link">Planes</a>
+            <a href="#" class="header__nav-link">Nosotros</a>
+            <a href="#" class="header__nav-link">Soluciones</a>
+            <a href="#" class="header__nav-link">Demo</a>
+          </div>
+        </nav>
+
+        <div class="header__registro">
+          <a href="#" class="button--secondary">Log In <span> ></span></a>
+        </div>
+      </section>
+    </header>
+
+    <div class="Registro__contenedor">
+      <main class="registro">
+        <h1>Registro</h1>
+
+        <div class="form-container">
+          <div class="form-container__content">
+            <div class="form">
+              <div class="form__group">
+                <label for="fullname" class="form__label">Nombre</label>
+                <input type="text" id="fullname" class="form__input" />
+              </div>
+
+              <div class="form__group">
+                <label for="apellidos" class="form__label">Apellidos</label>
+                <input type="text" id="apellidos" class="form__input" />
+              </div>
+
+              <div class="form__group">
+                <label for="email" class="form__label">Email</label>
+                <input type="email" id="email" class="form__input" />
+              </div>
+
+              <div class="form__group">
+                <label for="username" class="form__label">Nombre Usuario</label>
+                <input type="text" id="username" class="form__input" />
+              </div>
+
+              <div class="form__group password">
+                <div class="input-wrapper">
+                  <label for="password" class="input-label form__label"
+                    >Contraseña</label
+                  >
+                  <input
+                    id="password"
+                    type="password"
+                    name="password"
+                    title="Minimum 6 characters, at least 1 Alphabet, 1 Number, and 1 Symbol"
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{6,}$"
+                    required
+                    class="input-field"
+                  />
+                  <img
+                    alt="Eye Icon"
+                    title="Eye Icon"
+                    src="build/img/eye.svg"
+                    class="input-icon"
+                  />
+                </div>
+
+                <div class="password-strength">
+                  <p><span id="result"></span></p>
+                  <div class="progress">
+                    <div
+                      id="password-strength"
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="40"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 0%; height: 3px"
+                    ></div>
+                  </div>
+                  <ul class="password-strength-items">
+                    <li class="low-upper-case">
+                      <img
+                        src="build/img/circle-cross.svg"
+                        alt="Rule not met"
+                      />
+                      <p>Minúsculas y Mayúsculas</p>
+                    </li>
+                    <li class="one-number">
+                      <img
+                        src="build/img/circle-cross.svg"
+                        alt="Rule not met"
+                      />
+                      <p>Número (0-9)</p>
+                    </li>
+                    <li class="one-special-char">
+                      <img
+                        src="build/img/circle-cross.svg"
+                        alt="Rule not met"
+                      />
+                      <p>Carácteres especiales (!%&@#$^*?_~)</p>
+                    </li>
+                    <li class="eight-character">
+                      <img
+                        src="build/img/circle-cross.svg"
+                        alt="Rule not met"
+                      />
+                      <p>Al menos 8 caracteres</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="form__actions">
+                <button type="submit" class="form__button">Registrarse</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer id="signup" class="footer">
+      <p class="footer__title">
+        Urnal by <a href="https://github.com/albertosdz">albertosdz</a>
+      </p>
+      <div class="footer__redes">
+        <a href="https://www.instagram.com/"
+          ><img src="build/img/instagram.svg" alt="instagram"
+        /></a>
+        <a href="https://www.youtube.com/"
+          ><img src="build/img/youtube.svg" alt="youtube"
+        /></a>
+        <a href="https://x.com"><img src="build/img/x.svg" alt="x" /></a>
+        <a href="https://es.linkedin.com/"
+          ><img src="build/img/linkedin.svg" alt="linkedin"
+        /></a>
+      </div>
+      <a href="#" class="button--ghost">Regístrate gratis</a>
+    </footer>
+    <script src="build/js/bundle.min.js"></script>
+  </body>
+</html>
