@@ -3,16 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Urnal</title>
-
+    <meta
+      name="description"
+      content="Conoce al equipo detrás de Urnal y nuestra filosofía para crear una aplicación intuitiva y eficiente para la gestión de proyectos y tareas."
+    />
+    <meta
+      name="keywords"
+      content="Urnal, equipo, filosofía, productividad, gestión de proyectos, automatización, tareas, hábitos"
+    />
+    <meta name="author" content="albertosdz" />
+    <meta property="og:title" content="Nosotros - Urnal" />
+    <meta
+      property="og:description"
+      content="Conoce al equipo detrás de Urnal y nuestra filosofía de diseño y productividad."
+    />
+    <meta property="og:image" content="build/img/logo.svg" />
+    <meta property="og:url" content="https://www.tusitio.com/nosotros" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nosotros - Urnal" />
+    <meta
+      name="twitter:description"
+      content="Conoce al equipo detrás de Urnal y nuestra filosofía de diseño y productividad."
+    />
+    <meta name="twitter:image" content="build/img/logo.svg" />
+    <title>Nosotros - Urnal</title>
     <link rel="icon" type="image/svg+xml" href="build/img/logo.svg" />
     <link rel="stylesheet" href="build/css/app.css" />
   </head>
   <body>
-    <header class="header internas">
+    <header class="header internas" itemscope itemtype="https://schema.org/Organization">
       <section class="arriba">
         <a href="/" class="header__logo">
-          <img src="build/img/logo.svg" alt="logo" class="header__logo-image logo-interno" />
+          <img
+            src="build/img/logo.svg"
+            alt="logo"
+            class="header__logo-image logo-interno"
+          />
           <h2 class="header__logo-text">Urnal</h2>
         </a>
 
@@ -30,9 +56,9 @@
             />
           </div>
           <div class="header__nav-list">
-            <a href="#" class="header__nav-link">Planes</a>
-            <a href="#" class="header__nav-link">Nosotros</a>
-            <a href="#" class="header__nav-link">Soluciones</a>
+            <a href="planes.html" class="header__nav-link">Planes</a>
+            <a href="nosotros.html" class="header__nav-link">Nosotros</a>
+            <a href="faq.html" class="header__nav-link">FAQ</a>
             <a href="#" class="header__nav-link">Demo</a>
           </div>
         </nav>
@@ -43,10 +69,18 @@
       </section>
     </header>
 
-    <main >
-      <h1 class="nosotros__titulo">Sobre <span class="nosotros__titulo--azul">Urnal</span></h1>
+    <main>
+      <nav class="breadcrumb">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/nosotros.html">Nosotros</a></li>
+        </ul>
+      </nav>
+      <h1 class="nosotros__titulo">
+        Sobre <span class="nosotros__titulo--azul">Urnal</span>
+      </h1>
 
-      <div class="nosotros">
+      <div class="nosotros" itemscope itemtype="https://schema.org/SoftwareApplication">
         <section class="nosotros__seccion">
           <h2 class="nosotros__subtitulo">
             Qué es <span class="nosotros__subtitulo--azul">Urnal</span>

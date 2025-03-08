@@ -1,12 +1,52 @@
+<!--
+Mejoras que podria hacer a futuro:
+- Reducir el contenido, hacerlo más breve y conciso
+- Implementar nuevas animaciones que lleven la atencion del usuario a apartados más importantes
+- Implementar un modo oscuro y el modo de contraste colocarlo en otro sitio
+- Mejorar el registro
+
+Tengo un error en el index, en el apartado de productividad sin esfuerzo, al poner lo del cambio de idioma no muestre el contenido del segundo bloque, he estado intentando arreglarlo pero no he sido capaz.
+En esta version tambien he añadido el Breadcrumb, he añadido que se puedan categorizar las preguntas en faq.
+-->
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Urnal</title>
-
-    <link rel="icon" type="image/svg+xml" href="build/img/logo.svg">
-    <link rel="stylesheet" href="build/css/app.css" />
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+        name="description"
+        content="Urnal es la aplicación que organiza tu día, optimiza tu vida con funciones de gestión de proyectos, tareas y hábitos de manera inteligente."
+      />
+      <meta
+        name="keywords"
+        content="Urnal, productividad, gestión de proyectos, tareas, hábitos, automatización inteligente"
+      />
+      <meta name="author" content="albertosdz" />
+      <meta
+        property="og:title"
+        content="Urnal - Organiza tu día, optimiza tu vida"
+      />
+      <meta
+        property="og:description"
+        content="Gestiona tus proyectos, tareas y hábitos de manera eficiente con Urnal. Optimiza tu vida y aumenta tu productividad."
+      />
+      <meta property="og:image" content="build/img/logo.svg" />
+      <meta property="og:url" content="https://www.tusitio.com" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="Urnal - Organiza tu día, optimiza tu vida"
+      />
+      <meta
+        name="twitter:description"
+        content="Gestiona tus proyectos, tareas y hábitos de manera eficiente con Urnal. Optimiza tu vida y aumenta tu productividad."
+      />
+      <meta name="twitter:image" content="build/img/logo.svg" />
+      <title>Urnal</title>
+      <link rel="icon" type="image/svg+xml" href="build/img/logo.svg" />
+      <link rel="stylesheet" href="build/css/app.css" />
+    </head>
   </head>
   <body>
     <header class="header inicio">
@@ -29,32 +69,72 @@
               class="header__nav--boton"
             />
           </div>
+
+          <div class="language-selector langResponsivo">
+            <div class="dropdown">
+              <button class="translate" id="es">🇪🇸</button>
+              <button class="translate" id="en">🇬🇧</button>
+            </div>
+          </div>
+
           <div class="header__nav-list">
-            <a href="#" class="header__nav-link">Planes</a>
-            <a href="nosotros.html" class="header__nav-link">Nosotros</a>
-            <a href="#" class="header__nav-link">Soluciones</a>
+            <a href="planes.html" class="header__nav-link lang" key="planes"
+              >Planes</a
+            >
+            <a href="nosotros.html" class="header__nav-link lang" key="nosotros"
+              >Nosotros</a
+            >
+            <a href="faq.html" class="header__nav-link">FAQ</a>
             <a href="#" class="header__nav-link">Demo</a>
+            <img
+              src="build/img/contrast.svg"
+              alt="boton contraste"
+              class="boton-contraste"
+            />
           </div>
         </nav>
 
         <div class="header__registro">
-          <a href="#" class="button--secondary">Log In <span> ></span></a>
+          <div class="language-selector">
+            🌍
+            <div class="dropdown">
+              <button class="translate" id="es">🇪🇸</button>
+              <button class="translate" id="en">🇬🇧</button>
+            </div>
+          </div>
+          <div class="header__registro-log">
+            <a href="#" class="button--secondary">Log In <span> ></span></a>
+          </div>
         </div>
       </section>
 
       <section class="hero abajo">
-        <h1 class="hero__title">Urnal organiza tu día, optimiza tu vida.</h1>
-        <p class="hero__text">
+        <h1 class="hero__title lang" key="hero_title">
+          Urnal organiza tu día, optimiza tu vida.
+        </h1>
+        <p class="hero__text lang" key="hero_text">
           Gestión de proyectos, tareas y hábitos de manera simple e inteligente.
         </p>
-        <a href="registro.html" class="button button--primary">Registro</a>
+        <a
+          href="registro.html"
+          class="button button--primary lang"
+          key="registro"
+          >Registro</a
+        >
       </section>
     </header>
 
     <main class="main contenedor">
+      <nav class="breadcrumb">
+        <ul>
+          <li><a href="/"></a></li>
+        </ul>
+      </nav>
       <section id="beneficios" class="benefits">
-        <h2 class="benefits__title">Productividad sin esfuerzo</h2>
-        <p class="benefits__description">
+        <h2 class="benefits__title lang" key="benefits_title">
+          Productividad sin esfuerzo
+        </h2>
+        <p class="benefits__description lang" key="benefits_description">
           En Urnal creemos que la organización no debe ser complicada ni
           consumir demasiado tiempo. Nuestra plataforma está diseñada para
           ayudarte a gestionar tus tareas, proyectos y hábitos de manera
@@ -65,64 +145,95 @@
           onclick="cambiarBeneficio('beneficio1')"
           id="beneItem1"
         >
-          <h3>Automatización inteligente</h3>
-          <p>
+          <h3 class="lang" key="automation">Automatización inteligente</h3>
+          <p class="lang" key="automation_text">
             Urnal ajusta automáticamente tus tareas y horarios según tus hábitos
             y prioridades, asegurando que cada día sea más eficiente sin
             necesidad de configuraciones complejas.
           </p>
         </div>
-        <img src="build/img/beneficios.avif" alt="beneficios" class="beneficioResponsive"/>
+        <img
+          src="build/img/beneficios.avif"
+          alt="beneficios"
+          class="beneficioResponsive"
+        />
         <div
-          class="benefits__item"
+          class="benefits__item lang"
           onclick="cambiarBeneficio('beneficio2')"
           id="beneItem2"
         >
-          <h3>Gestión flexible de tareas y proyectos</h3>
-          <p>
+          <h3 class="lang" key="task_management">
+            Gestión flexible de tareas y proyectos
+          </h3>
+          <p class="lang" key="task_management_text">
             Organiza tu trabajo de la forma que prefieras, ya sea con listas,
             tableros o etiquetas. Adapta cada proyecto a tus necesidades sin
             perder el control de tus objetivos.
           </p>
         </div>
-        <img src="build/img/beneficios2.png" alt="beneficios" class="beneficioResponsive"/>
+        <img
+          src="build/img/beneficios2.png"
+          alt="beneficios"
+          class="beneficioResponsive"
+        />
         <div
           class="benefits__item"
           onclick="cambiarBeneficio('beneficio3')"
           id="beneItem3"
         >
-          <h3>Seguimiento de hábitos</h3>
-          <p>
+          <h3 class="lang" key="habit_tracking">Seguimiento de hábitos</h3>
+          <p class="lang" key="habit_tracking_text">
             Construye y mantiene hábitos saludables con recordatorios
             personalizados y un sistema de seguimiento que te ayuda a mantener
             la motivación.
           </p>
         </div>
-        <img src="build/img/beneficios3.png" alt="beneficios" class="beneficioResponsive"/>
+        <img
+          src="build/img/beneficios3.png"
+          alt="beneficios"
+          class="beneficioResponsive"
+        />
 
-        <img src="build/img/beneficios.avif" alt="beneficios" id="beneficio1" class="responsivo"/>
-        <img src="build/img/beneficios2.png" alt="beneficios" id="beneficio2" class="responsivo"/>
-        <img src="build/img/beneficios3.png" alt="beneficios" id="beneficio3" class="responsivo"/>
+        <img
+          src="build/img/beneficios.avif"
+          alt="beneficios"
+          id="beneficio1"
+          class="responsivo"
+        />
+        <img
+          src="build/img/beneficios2.png"
+          alt="beneficios"
+          id="beneficio2"
+          class="responsivo"
+        />
+        <img
+          src="build/img/beneficios3.png"
+          alt="beneficios"
+          id="beneficio3"
+          class="responsivo"
+        />
       </section>
 
       <!-- Funcionalidades -->
       <section id="features" class="features">
-        <h2 class="features__title">Todo lo que necesitas en un solo lugar</h2>
+        <h2 class="features__title lang" key="features_title">
+          Todo lo que necesitas en un solo lugar
+        </h2>
         <div class="features__items">
           <div class="features__item">
-            <h3>Gestor de proyectos</h3>
+            <h3 class="lang" key="project_manager">Gestor de proyectos</h3>
             <img src="build/img/proyects.svg" alt="" />
           </div>
           <div class="features__item">
-            <h3>Planificación de tareas</h3>
+            <h3 class="lang" key="task_planner">Planificación de tareas</h3>
             <img src="build/img/tasks.svg" alt="" />
           </div>
           <div class="features__item">
-            <h3>Seguimiento de hábitos</h3>
+            <h3 class="lang" key="habit_tracker">Seguimiento de hábitos</h3>
             <img src="build/img/habits.svg" alt="" />
           </div>
           <div class="features__item">
-            <h3>Automatización inteligente</h3>
+            <h3 class="lang" key="">Automatización inteligente</h3>
             <img src="build/img/brain.svg" alt="" />
           </div>
         </div>
@@ -130,31 +241,35 @@
 
       <!-- Testimonios -->
       <section id="testimonios" class="testimonials">
-        <h2 class="testimonials__title">Lo que dicen nuestros usuarios</h2>
+        <h2 class="testimonials__title lang" key="testimonials_title">
+          Lo que dicen nuestros usuarios
+        </h2>
         <div class="testimonials__container">
-          <p class="testimonials__text">
+          <p class="testimonials__text lang" key="testimonial_1">
             "Urnal ha cambiado la forma en que organizo mi día, ahora soy mucho
             más productivo."
           </p>
           <div class="testimonials__icon">
             <img src="build/img/user.svg" alt="icono usuario" />
-            <p>Usuario MUY Feliz</p>
+            <p key="">Usuario MUY Feliz</p>
           </div>
         </div>
 
         <div class="testimonials__container">
-          <p class="testimonials__text">
+          <p class="testimonials__text lang" key="testimonial_2">
             "Gracias a Urnal, mi planificación diaria es más sencilla y
             efectiva. ¡No pierdo ni un minuto!"
           </p>
           <div class="testimonials__icon">
             <img src="build/img/user.svg" alt="icono usuario" />
-            <p>Usuario Contento</p>
+            <p key="">Usuario Contento</p>
           </div>
         </div>
 
         <div class="testimonials__container">
-          <p class="testimonials__text">"Novea como me organizo ahora picha"</p>
+          <p class="testimonials__text lang" key="testimonial_3">
+            "Novea como me organizo ahora picha"
+          </p>
           <div class="testimonials__icon">
             <img src="build/img/user.svg" alt="icono usuario" />
             <p>Juan Alberto</p>
@@ -162,7 +277,7 @@
         </div>
 
         <div class="testimonials__container">
-          <p class="testimonials__text">
+          <p class="testimonials__text lang" key="testimonial_4">
             "Nunca había sido tan fácil gestionar mis proyectos. Urnal hace el
             trabajo pesado por mí."
           </p>
@@ -190,7 +305,9 @@
           ><img src="build/img/linkedin.svg" alt="linkedin"
         /></a>
       </div>
-      <a href="registro.html" class="button--ghost">Regístrate gratis</a>
+      <a href="registro.html" class="button--ghost lang" key="signup"
+        >Regístrate gratis</a
+      >
     </footer>
     <script src="build/js/bundle.min.js"></script>
   </body>

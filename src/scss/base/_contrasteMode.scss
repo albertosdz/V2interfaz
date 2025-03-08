@@ -1,0 +1,67 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.contraste-mode {
+  background: v.$negro;
+  color: v.$blanco;
+
+  p {
+    color: v.$blanco;
+  }
+
+  img {
+    filter: grayscale(100%) contrast(200%);
+  }
+
+  .inicio {
+    background-image: linear-gradient(
+      to bottom,
+      #ffcc00,
+      /* Amarillo fuerte para alto contraste */ #ff8800,
+      /* Naranja brillante */ #ff4444,
+      /* Rojo intenso */ #aa0000,
+      /* Rojo oscuro */ #000000 /* Negro puro */
+    );
+  }
+
+  .header__logo-text,
+  .header__nav-link,
+  .button--secondary {
+    color: v.$blanco;
+  }
+
+  .header__registro {
+    .language-selector {
+      background-color: #8b0000;
+    }
+  }
+
+  .button--primary {
+    @include m.boton(rgb(255, 196, 0), v.$blanco, none);
+  }
+
+  .features__item {
+    &:nth-child(1) {
+      background: rgb(255, 80, 0);
+    }
+    &:nth-child(2) {
+      background: #5cafff;
+    }
+    &:nth-child(3) {
+      background: rgb(0, 255, 128);
+    }
+    &:nth-child(4) {
+      background: rgb(255, 255, 0);
+    }
+  }
+
+  .testimonials__container {
+    background: #4178d4;
+    .testimonials__icon {
+      img {
+        color: white;
+      }
+      background: grey;
+    }
+  }
+}

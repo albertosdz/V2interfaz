@@ -1,3 +1,39 @@
+document.addEventListener("DOMContentLoaded", function () {
+  contrasteMode();
+
+  const breadcrumb = document.querySelector(".breadcrumb ul");
+  const path = window.location.pathname.split("/");
+
+  // Agregar la ruta de inicio
+  const homeLi = document.createElement("li");
+  const homeA = document.createElement("a");
+  homeA.href = "/";
+  homeA.textContent = "Inicio";
+  homeLi.appendChild(homeA);
+  breadcrumb.appendChild(homeLi);
+
+  // Agregar las otras partes de la URL como elementos del breadcrumb
+  path.forEach((segment, index) => {
+    if (segment && index !== path.length - 1) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = "/" + path.slice(0, index + 1).join("/");
+      a.textContent = segment.charAt(0).toUpperCase() + segment.slice(1);
+      li.appendChild(a);
+      breadcrumb.appendChild(li);
+    }
+  });
+
+  // Agregar el nombre de la página sin enlace
+  if (path[path.length - 1]) {
+    const li = document.createElement("li");
+    li.textContent =
+      path[path.length - 1].charAt(0).toUpperCase() +
+      path[path.length - 1].slice(1);
+    breadcrumb.appendChild(li);
+  }
+});
+
 //cambiar beneficios
 
 if (window.matchMedia("(min-width: 850px)").matches) {
@@ -47,6 +83,32 @@ if (window.matchMedia("(min-width: 850px)").matches) {
   }
 }
 
+function contrasteMode() {
+  const botonContrasteMode = document.querySelector(".boton-contraste");
+
+  botonContrasteMode.addEventListener("click", function () {
+    document.body.classList.toggle("contraste-mode");
+  });
+}
+
+// Filtra las preguntas y respuestas por categoría
+function filterFAQ(category) {
+  // Obtiene todas las categorías
+  const categories = document.querySelectorAll(".faq__category");
+
+  // Si la categoría está vacía, muestra todo
+  categories.forEach((cat) => {
+    if (
+      category === "" ||
+      cat.querySelector(".faq__category-title").textContent === category
+    ) {
+      cat.style.display = "block"; // Muestra la categoría
+    } else {
+      cat.style.display = "none"; // Oculta las categorías no seleccionadas
+    }
+  });
+}
+
 //navegacion responsive
 const nav = document.getElementById("nav");
 const abrir = document.getElementById("abrir");
@@ -61,5 +123,3 @@ cerrar.addEventListener("click", () => {
   nav.classList.remove("visible");
   document.body.style.overflow = "";
 });
-
-

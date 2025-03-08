@@ -17,7 +17,7 @@ const paths = {
 };
 
 function clean() {
-    return del(['build/**', '!build/img', '!build/img/**']);
+    return del(['build/**', '!build/img', '!build/img/**', '!build/json', '!build/json/**']);
 }
 
 function css() {

@@ -12,8 +12,6 @@
   );
 }
 
-
-
 .logo-interno {
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.359));
 }
@@ -54,28 +52,90 @@
     .header__nav-list {
       display: flex;
       justify-content: space-evenly;
+      align-items: center;
       width: 100%;
       .header__nav-link {
         font-weight: 500;
       }
+
+      .boton-contraste {
+        height: 2rem;
+        width: fit-content;
+        cursor: pointer;
+      }
+    }
+    .langResponsivo {
+      display: none;
     }
   }
 
   .header__registro {
-    transition: ease 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 
-    &:hover {
-      transform: scale(1.07);
+    .language-selector {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      padding: 0.7rem;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      button {
+        display: block;
+        padding: 8px;
+        text-decoration: none;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        background: transparent;
+
+        &:hover {
+          background: #f0f0f0;
+        }
+      }
+    }
+
+    .language-selector:hover .dropdown {
+      display: block;
+    }
+
+    &-log {
+      transition: ease 0.5s;
+
+      &:hover {
+        transform: scale(1.07);
+      }
     }
   }
 
   @include m.tablet {
+    .dropdown {
+      button {
+        background: transparent;
+        border: none;
+        font-size: 5rem;
+      }
+    }
+
     .header__abrir,
     .header__nav-cerrar {
       display: block;
       width: 3rem;
     }
-
 
     .header__registro {
       display: none;
@@ -94,21 +154,24 @@
       margin-right: 0;
       padding: 3rem;
       background: v.$azul;
-      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
 
-      &-cerrar{
+      &-cerrar {
         width: 3rem;
         display: flex;
         align-self: self-end;
       }
 
+      .langResponsivo {
+        display: block;
+        align-self: center;
+      }
     }
 
     .visible {
       opacity: 1;
       visibility: visible;
     }
-    
 
     .header__nav-list {
       flex-direction: column;
@@ -118,7 +181,6 @@
       .header__nav-link {
         margin-top: 4rem;
         color: v.$blanco;
-
       }
     }
   }
@@ -137,7 +199,10 @@
 .internas {
   background: v.$azul;
 
-  section, p,a ,span{
+  section,
+  p,
+  a,
+  span {
     color: v.$blanco;
   }
 }
@@ -153,5 +218,4 @@
       font-size: 4rem;
     }
   }
-
 }

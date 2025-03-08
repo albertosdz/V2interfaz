@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urnal</title>
+
+    <link rel="icon" type="image/svg+xml" href="build/img/logo.svg" />
+    <link rel="stylesheet" href="build/css/app.css" />
+  </head>
+  <body>
+    <header class="header internas">
+      <section class="arriba">
+        <a href="/" class="header__logo">
+          <img
+            src="build/img/logo.svg"
+            alt="logo"
+            class="header__logo-image logo-interno"
+          />
+          <h2 class="header__logo-text">Urnal</h2>
+        </a>
+
+        <div class="header__abrir" id="abrir">
+          <img src="build/img/abrirMenuBlanco.svg" alt="Abrir menu" />
+        </div>
+
+        <nav class="header__nav" id="nav">
+          <div class="header__nav-cerrar">
+            <img
+              src="build/img/cerrarMenu.svg"
+              id="cerrar"
+              alt="Cerrar Menu"
+              class="header__nav--boton"
+            />
+          </div>
+          <div class="header__nav-list">
+            <a href="planes.html" class="header__nav-link">Planes</a>
+            <a href="nosotros.html" class="header__nav-link">Nosotros</a>
+            <a href="faq.html" class="header__nav-link">FAQ</a>
+            <a href="#" class="header__nav-link">Demo</a>
+          </div>
+        </nav>
+
+        <div class="header__registro">
+          <a href="#" class="button--secondary">Log In <span> ></span></a>
+        </div>
+      </section>
+    </header>
+
+    <main class="contenedor">
+      <nav class="breadcrumb">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <section class="faq">
+        <div class="faq__header">
+          <h1 class="faq__title">¿Tienes dudas? Estamos aquí para ayudarte</h1>
+          <p class="faq__description">
+            Explora nuestras preguntas frecuentes y encuentra respuestas rápidas
+            sobre Urnal.
+          </p>
+          <!-- Filtro por categorías -->
+          <div class="faq__filters">
+            <button
+              class="button button--primary"
+              onclick="filterFAQ('Cuenta y Configuración')"
+            >
+              Cuenta y Configuración
+            </button>
+            <button
+              class="button button--primary"
+              onclick="filterFAQ('Planes y Facturación')"
+            >
+              Planes y Facturación
+            </button>
+            <button
+              class="button button--primary"
+              onclick="filterFAQ('Funcionalidades y Uso')"
+            >
+              Funcionalidades y Uso
+            </button>
+            <button class="button button--primary" onclick="filterFAQ('')">
+              Mostrar todo
+            </button>
+          </div>
+        </div>
+
+        <div class="faq__categories">
+          <div class="faq__category">
+            <h2 class="faq__category-title">Cuenta y Configuración</h2>
+
+            <div class="faq__item">
+              <h3 class="faq__question">¿Cómo creo una cuenta en Urnal?</h3>
+              <p class="faq__answer">
+                Para crear una cuenta, simplemente ve a la página de registro,
+                ingresa tu correo electrónico, elige una contraseña segura y
+                sigue las instrucciones para completar tu registro.
+              </p>
+            </div>
+
+            <div class="faq__item">
+              <h3 class="faq__question">
+                ¿Puedo cambiar mi correo o contraseña?
+              </h3>
+              <p class="faq__answer">
+                Sí, puedes modificar tu correo electrónico o contraseña en
+                cualquier momento desde la sección de configuración de tu
+                cuenta. Solo ingresa a "Mi Cuenta" y selecciona "Cambiar datos
+                de acceso".
+              </p>
+            </div>
+
+            <div class="faq__item">
+              <h3 class="faq__question">¿Cómo elimino mi cuenta de Urnal?</h3>
+              <p class="faq__answer">
+                Si deseas eliminar tu cuenta, accede a la configuración de tu
+                perfil y busca la opción "Eliminar cuenta". Ten en cuenta que
+                esta acción es irreversible.
+              </p>
+            </div>
+
+            <div class="faq__item">
+              <h3 class="faq__question">
+                ¿Puedo usar Urnal en varios dispositivos?
+              </h3>
+              <p class="faq__answer">
+                Sí, puedes acceder a tu cuenta desde cualquier dispositivo con
+                conexión a Internet. Solo asegúrate de iniciar sesión con el
+                mismo correo y contraseña.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__category">
+            <h2 class="faq__category-title">Planes y Facturación</h2>
+            <div class="faq__item">
+              <h3 class="faq__question">
+                ¿Cuáles son las diferencias entre los planes de Urnal?
+              </h3>
+              <p class="faq__answer">
+                El plan gratuito ofrece acceso limitado a ciertas funciones,
+                como la cantidad de tareas que puedes gestionar. El plan
+                Premium, por otro lado, incluye funcionalidades avanzadas como
+                tareas ilimitadas, integración con otras aplicaciones y soporte
+                prioritario.
+              </p>
+            </div>
+            <div class="faq__item">
+              <h3 class="faq__question">¿Cómo puedo cambiar de plan?</h3>
+              <p class="faq__answer">
+                Puedes actualizar o cancelar tu suscripción desde la sección de
+                "Mi Cuenta" en la configuración de tu perfil. Ahí encontrarás
+                todas las opciones para modificar tu plan.
+              </p>
+            </div>
+            <div class="faq__item">
+              <h3 class="faq__question">¿Qué métodos de pago acepta Urnal?</h3>
+              <p class="faq__answer">
+                Aceptamos pagos mediante tarjeta de crédito, PayPal y
+                transferencia bancaria. Elige el método de pago que prefieras en
+                la sección de facturación.
+              </p>
+            </div>
+            <div class="faq__item">
+              <h3 class="faq__question">
+                ¿Puedo obtener un reembolso si no estoy satisfecho con el
+                servicio?
+              </h3>
+              <p class="faq__answer">
+                Sí, ofrecemos una política de reembolso de 30 días si no estás
+                satisfecho con el servicio. Solo contacta con nuestro soporte y
+                te ayudaremos a procesar el reembolso.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__category">
+            <h2 class="faq__category-title">Funcionalidades y Uso</h2>
+            <div class="faq__item">
+              <h3 class="faq__question">¿Cómo organizo mis tareas en Urnal?</h3>
+              <p class="faq__answer">
+                Puedes organizar tus tareas creando listas personalizadas.
+                Además, puedes asignar fechas de vencimiento, priorizar tareas y
+                añadir notas para mantener todo ordenado.
+              </p>
+            </div>
+            <div class="faq__item">
+              <h3 class="faq__question">
+                ¿Puedo sincronizar Urnal con otras aplicaciones?
+              </h3>
+              <p class="faq__answer">
+                Sí, Urnal se integra con aplicaciones populares como Google
+                Calendar, Trello y Slack para que puedas mantener todas tus
+                herramientas de productividad conectadas.
+              </p>
+            </div>
+            <div class="faq__item">
+              <h3 class="faq__question">
+                ¿Cómo puedo compartir mis tareas con otras personas?
+              </h3>
+              <p class="faq__answer">
+                Puedes compartir listas de tareas con otros usuarios de Urnal a
+                través de la opción "Compartir" que encontrarás en la
+                configuración de cada lista. También puedes permitir que otras
+                personas editen las tareas si así lo deseas.
+              </p>
+            </div>
+            <div class="faq__item">
+              <h3 class="faq__question">
+                ¿Existen notificaciones para tareas pendientes?
+              </h3>
+              <p class="faq__answer">
+                Sí, Urnal te enviará notificaciones de tareas pendientes, fechas
+                de vencimiento y recordatorios, tanto por correo electrónico
+                como en la aplicación, para que nunca te olvides de lo que debes
+                hacer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="signup" class="footer">
+      <p class="footer__title">
+        Urnal by <a href="https://github.com/albertosdz">albertosdz</a>
+      </p>
+      <div class="footer__redes">
+        <a href="https://www.instagram.com/"
+          ><img src="build/img/instagram.svg" alt="instagram"
+        /></a>
+        <a href="https://www.youtube.com/"
+          ><img src="build/img/youtube.svg" alt="youtube"
+        /></a>
+        <a href="https://x.com"><img src="build/img/x.svg" alt="x" /></a>
+        <a href="https://es.linkedin.com/"
+          ><img src="build/img/linkedin.svg" alt="linkedin"
+        /></a>
+      </div>
+      <a href="registro.html" class="button--ghost">Regístrate gratis</a>
+    </footer>
+    <script src="build/js/bundle.min.js"></script>
+  </body>
+</html>

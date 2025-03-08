@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urnal</title>
+
+    <link rel="icon" type="image/svg+xml" href="build/img/logo.svg" />
+    <link rel="stylesheet" href="build/css/app.css" />
+  </head>
+  <body>
+    <header class="header internas">
+      <section class="arriba">
+        <a href="/" class="header__logo">
+          <img
+            src="build/img/logo.svg"
+            alt="logo"
+            class="header__logo-image logo-interno"
+          />
+          <h2 class="header__logo-text">Urnal</h2>
+        </a>
+
+        <div class="header__abrir" id="abrir">
+          <img src="build/img/abrirMenuBlanco.svg" alt="Abrir menu" />
+        </div>
+
+        <nav class="header__nav" id="nav">
+          <div class="header__nav-cerrar">
+            <img
+              src="build/img/cerrarMenu.svg"
+              id="cerrar"
+              alt="Cerrar Menu"
+              class="header__nav--boton"
+            />
+          </div>
+          <div class="header__nav-list">
+            <a href="#" class="header__nav-link">Planes</a>
+            <a href="nosotros.html" class="header__nav-link">Nosotros</a>
+            <a href="faq.html" class="header__nav-link">FAQ</a>
+            <a href="#" class="header__nav-link">Demo</a>
+          </div>
+        </nav>
+
+        <div class="header__registro">
+          <a href="#" class="button--secondary">Log In <span> ></span></a>
+        </div>
+      </section>
+    </header>
+
+    <nav class="breadcrumb">
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/planes.html">Planes</a></li>
+      </ul>
+    </nav>
+    <section class="planes__titulo">
+      <h1 class="planes__titulo-texto">Urnal a tu manera</h1>
+      <p class="planes__titulo-descripcion">
+        Elige el mejor plan que se adapte a tus necesidades
+      </p>
+    </section>
+
+    <main class="planes">
+     
+      <div class="planes__plan planes__plan--gratuito">
+        <h2 class="planes__plan-titulo">🆓 Gratuito</h2>
+
+        <div class="planes__plan-precio">
+          <p><span class="planes__plan-precio-cantidad">0</span>€ / mes</p>
+        </div>
+        <p class="planes__plan-descripcion">
+          Ideal para quienes buscan una solución sencilla para gestionar sus
+          tareas diarias sin compromisos.
+        </p>
+
+        <button class="button--primary">Empieza Gratis</button>
+        <hr class="planes__plan-separador" />
+        <h3 class="planes__plan-subtitulo">Incluido en el plan</h3>
+        <ul class="planes__plan-lista">
+          <li class="planes__plan-item">✅ Tareas ilimitadas</li>
+          <li class="planes__plan-item">✅ Notificaciones básicas</li>
+          <li class="planes__plan-item">
+            ✅ Sincronización en un solo dispositivo
+          </li>
+          <li class="planes__plan-item">❌ Sin automatización avanzada</li>
+          <li class="planes__plan-item">❌ Sin soporte prioritario</li>
+        </ul>
+      </div>
+
+      <div class="planes__plan planes__plan--pro">
+        <h2 class="planes__plan-titulo">💼 Pro</h2>
+
+        <div class="planes__plan-precio">
+          <p><span class="planes__plan-precio-cantidad">9.99</span>€ / mes</p>
+        </div>
+        <p class="planes__plan-descripcion">
+          Perfecto para profesionales y estudiantes que necesitan más control,
+          automatización y organización en su día a día.
+        </p>
+
+        <button class="button--primary">Pruébalo Gratis</button>
+        <hr class="planes__plan-separador" />
+        <h3 class="planes__plan-subtitulo">Incluido en el plan</h3>
+        <ul class="planes__plan-lista">
+          <li class="planes__plan-item">✅ Todo en el Plan Gratuito</li>
+          <li class="planes__plan-item">
+            ✅ Automatización inteligente para optimizar tareas
+          </li>
+          <li class="planes__plan-item">
+            ✅ Integración con calendarios y apps externas
+          </li>
+          <li class="planes__plan-item">
+            ✅ Sincronización en múltiples dispositivos
+          </li>
+          <li class="planes__plan-item">
+            ✅ Soporte prioritario para resolver dudas más rápido
+          </li>
+        </ul>
+      </div>
+
+      <div class="planes__plan planes__plan--empresarial">
+        <h2 class="planes__plan-titulo">🏢 Empresarial</h2>
+
+        <div class="planes__plan-precio">
+          <span class="planes__plan-precio-cantidad">29.99</span>€ / mes
+        </div>
+        <p class="planes__plan-descripcion">
+          Diseñado para equipos y empresas que buscan mejorar la colaboración,
+          gestión de proyectos y control de tareas compartidas.
+        </p>
+
+        <button class="button--primary">Solicitar Demo</button>
+        <hr class="planes__plan-separador" />
+        <h3 class="planes__plan-subtitulo">Incluido en el plan</h3>
+        <ul class="planes__plan-lista">
+          <li class="planes__plan-item">✅ Todo en el Plan Pro</li>
+          <li class="planes__plan-item">
+            ✅ Colaboración en equipo con asignación de tareas
+          </li>
+          <li class="planes__plan-item">
+            ✅ Gestión de roles y permisos para mayor control
+          </li>
+          <li class="planes__plan-item">
+            ✅ Soporte VIP 24/7 con respuesta prioritaria
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <footer id="signup" class="footer">
+      <p class="footer__title">
+        Urnal by <a href="https://github.com/albertosdz">albertosdz</a>
+      </p>
+      <div class="footer__redes">
+        <a href="https://www.instagram.com/"
+          ><img src="build/img/instagram.svg" alt="instagram"
+        /></a>
+        <a href="https://www.youtube.com/"
+          ><img src="build/img/youtube.svg" alt="youtube"
+        /></a>
+        <a href="https://x.com"><img src="build/img/x.svg" alt="x" /></a>
+        <a href="https://es.linkedin.com/"
+          ><img src="build/img/linkedin.svg" alt="linkedin"
+        /></a>
+      </div>
+      <a href="registro.html" class="button--ghost">Regístrate gratis</a>
+    </footer>
+    <script src="build/js/bundle.min.js"></script>
+  </body>
+</html>

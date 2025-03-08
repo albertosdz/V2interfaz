@@ -1,7 +1,7 @@
-# V2interfaz
+# V3interfaz
 
 ## Descripción
-Sistema de interfaz web con automatización de tareas utilizando Gulp para optimización y compilación de recursos.
+Interfaz web con automatización de tareas utilizando Gulp para optimización y compilación de recursos.
 
 ## Tecnologías y Paquetes Utilizados
 - **gulp**: Sistema de automatización de tareas
